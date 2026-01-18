@@ -40,8 +40,7 @@ def main():
                 if is_safe:
                     print("Безопасно. Установка...")
                     subprocess.check_call([
-                        sys.executable, "-m", "pip", "install", 
-                        "--no-index", f"--find-links={sandbox_temp}", now_package
+                        sys.executable, "-m", "pip", "install", now_package
                     ])
                 else:
                     print("\nУСТАНОВКА ЗАБЛОКИРОВАНА! ИИ обнаружил угрозу.")
